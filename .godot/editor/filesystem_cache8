@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1710354994
+Camera2D.gd::GDScript::-1::1710243686::0::1::::<>Camera2D<>::
+CharacterBody2D.gd::GDScript::-1::1710248465::0::1::::<>CharacterBody2D<>::
+exam finished timer.gd::GDScript::-1::1710354933::0::1::::<>Timer<>::
+exit_button.gd::GDScript::-1::1710354933::0::1::::<>TextureButton<>::
+export_presets.cfg::TextFile::-1::1709928372::0::1::::<><>::
+icon.svg::CompressedTexture2D::1543956934936145078::1709921564::1709921573::1::::<><>::
+minigra_egzamin.tscn::PackedScene::5833374654741419495::1710354934::0::1::::<><>::res://Wysrywacz_literek.gd<>uid://bga0m05u4r81v::::res://grafiki/kosz.png<>res://CharacterBody2D.gd<>uid://cem01k4rs1cca::::res://grafiki/paper.jpg<>res://paper.gd<>res://Camera2D.gd<>res://exam finished timer.gd<>uid://bg08v2gxfir0s::::res://grafiki/background.png<>uid://dvu76stvbft7c::::res://grafiki/bton.png<>res://TextureButton.gd<>res://exit_button.gd
+paper.gd::GDScript::-1::1710353300::0::1::::<>TextureRect<>::
+SubViewport.gd::GDScript::-1::1710242864::0::1::::<>SubViewport<>::
+TextureButton.gd::GDScript::-1::1710351011::0::1::::<>TextureButton<>::
+Wysrywacz_literek.gd::GDScript::-1::1710354871::0::1::::<>TextureRect<>::
+::res://grafiki/::1710354994
+a.png::CompressedTexture2D::5945395616089581809::1710194418::1710194418::1::::<><>::
+b.png::CompressedTexture2D::7582323959645182136::1710194418::1710194418::1::::<><>::
+background.png::CompressedTexture2D::2861205780257397656::1710350254::1710350254::1::::<><>::
+bton.png::CompressedTexture2D::8676514601666043686::1710349914::1710349916::1::::<><>::
+c.png::CompressedTexture2D::8185222747708495774::1710194418::1710194418::1::::<><>::
+d.png::CompressedTexture2D::1426888521747640479::1710194418::1710194418::1::::<><>::
+desk.webp::CompressedTexture2D::2655815207437460629::1710354991::1710354994::1::::<><>::
+kosz.png::CompressedTexture2D::2809094460243371237::1710194418::1710194418::1::::<><>::
+paper.jpg::CompressedTexture2D::5079934201278047900::1710239434::1710239444::1::::<><>::
+::res://literka_prafabrykat/::1710354994
+CharacterBody2D.gd::GDScript::-1::1710237610::0::1::::<>CharacterBody2D<>::
+literka.gd::GDScript::-1::1710354458::0::1::::<>CharacterBody2D<>::
+literka.tscn::PackedScene::2635770468537669499::1710354934::0::1::::<><>::uid://cqx82dryyncfx::::res://grafiki/a.png<>res://literka_prafabrykat/literka.gd

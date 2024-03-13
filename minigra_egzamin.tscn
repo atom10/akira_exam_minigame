@@ -1,0 +1,206 @@
+[gd_scene load_steps=18 format=3 uid="uid://cpdy3frm7klud"]
+
+[ext_resource type="Texture2D" uid="uid://bd3q5hbr03kin" path="res://grafiki/desk.webp" id="1_0n46i"]
+[ext_resource type="Script" path="res://Wysrywacz_literek.gd" id="1_ll1pt"]
+[ext_resource type="Texture2D" uid="uid://bga0m05u4r81v" path="res://grafiki/kosz.png" id="2_8bkyp"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_s3pgs"]
+[ext_resource type="Texture2D" uid="uid://cem01k4rs1cca" path="res://grafiki/paper.jpg" id="4_08sr5"]
+[ext_resource type="Script" path="res://paper.gd" id="5_8dyhn"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="5_xo46h"]
+[ext_resource type="Script" path="res://exam finished timer.gd" id="6_x64k3"]
+[ext_resource type="Texture2D" uid="uid://bg08v2gxfir0s" path="res://grafiki/background.png" id="7_5tve0"]
+[ext_resource type="Texture2D" uid="uid://dvu76stvbft7c" path="res://grafiki/bton.png" id="7_udhq2"]
+[ext_resource type="Script" path="res://TextureButton.gd" id="9_m21xm"]
+[ext_resource type="Script" path="res://exit_button.gd" id="11_lkv55"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hn03w"]
+size = Vector2(166, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhf8r"]
+size = Vector2(176, 196)
+
+[sub_resource type="LabelSettings" id="LabelSettings_merwo"]
+font_size = 66
+font_color = Color(0, 0.670588, 0, 1)
+outline_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_rq2mv"]
+font_size = 82
+outline_size = 15
+outline_color = Color(0.109804, 0.0627451, 0.184314, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1emq"]
+font_size = 71
+outline_size = 40
+outline_color = Color(0, 0, 0.333333, 1)
+
+[node name="minigra_egzamin" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1319.0
+offset_bottom = 742.0
+texture = ExtResource("1_0n46i")
+
+[node name="Wysrywacz_literek" type="TextureRect" parent="."]
+offset_left = 322.0
+offset_top = -84.0
+offset_right = 1145.0
+offset_bottom = -74.0
+script = ExtResource("1_ll1pt")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Kosz" type="CharacterBody2D" parent="."]
+position = Vector2(529, 592)
+scale = Vector2(0.55, 0.55)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2_s3pgs")
+
+[node name="TextureRect" type="TextureRect" parent="Kosz"]
+offset_right = 217.0
+offset_bottom = 217.0
+texture = ExtResource("2_8bkyp")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Kosz"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kosz/Area2D"]
+position = Vector2(111, 28.5)
+shape = SubResource("RectangleShape2D_hn03w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kosz"]
+position = Vector2(110, 107)
+shape = SubResource("RectangleShape2D_uhf8r")
+
+[node name="paper" type="TextureRect" parent="."]
+offset_right = 309.0
+offset_bottom = 386.0
+texture = ExtResource("4_08sr5")
+expand_mode = 1
+script = ExtResource("5_8dyhn")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="paper"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 3.0
+offset_right = 310.0
+offset_bottom = 386.0
+bbcode_enabled = true
+text = "[font_size=10]Widmo krąży po Europie – widmo komunizmu. Wszystkie potęgi starej Europy połączyły się w świętej nagonce przeciw temu widmu: papież i car, Metternich i Guizot, francuscy radykałowie i niemieccy policjanci. Gdzie jest taka partia opozycyjna, która by nie była okrzyczana za komunistyczną przez swych przeciwników będących u władzy? Gdzie jest taka partia opozycyjna, która by z kolei nie odwzajemniała
+się piętnującym zarzutem komunizmu zarówno bardziej od siebie postępowym przedstawicielom opozycji, jak i swoim reakcyjnym przeciwnikom?
+Dwojaki wniosek wypływa z tego faktu.
+Komunizm jest już przez wszystkie potęgi europejskie uznany za potęgę.
+Czas już najwyższy, aby komuniści wyłożyli otwarcie wobec całego świata swój punkt widzenia,
+swoje cele, swoje dążenia i bajce o widmie komunizmu przeciwstawili manifest samej partii.
+W tym celu zebrali się w Londynie komuniści najróżniejszych narodowości i nakreślili następujący
+Manifest, który opublikowany zostaje w językach: angielskim, francuskim, niemieckim, włoskim, flamandzkim i duńskim. [/font_size]"
+scroll_active = false
+metadata/_edit_use_anchors_ = true
+
+[node name="exam finished timer" type="Timer" parent="paper"]
+one_shot = true
+script = ExtResource("6_x64k3")
+
+[node name="Label" type="Label" parent="paper"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 66.0
+offset_right = 338.0
+offset_bottom = 151.0
+rotation = 0.486595
+text = "PASS"
+label_settings = SubResource("LabelSettings_merwo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("5_xo46h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1318.0
+offset_bottom = 741.0
+texture = ExtResource("7_5tve0")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 361.0
+offset_right = 1065.0
+offset_bottom = 505.0
+texture_normal = ExtResource("7_udhq2")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_m21xm")
+
+[node name="Label" type="Label" parent="TextureRect/TextureButton"]
+layout_mode = 0
+offset_right = 613.0
+offset_bottom = 144.0
+text = "START"
+label_settings = SubResource("LabelSettings_rq2mv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paper" type="Sprite2D" parent="TextureRect"]
+texture_filter = 2
+position = Vector2(172, 310)
+rotation = -0.00191967
+scale = Vector2(0.205502, 0.205502)
+texture = ExtResource("4_08sr5")
+
+[node name="Paper2" type="Sprite2D" parent="TextureRect"]
+texture_filter = 2
+position = Vector2(191, 296)
+rotation = 0.0680678
+scale = Vector2(0.205502, 0.205502)
+texture = ExtResource("4_08sr5")
+
+[node name="Paper3" type="Sprite2D" parent="TextureRect"]
+texture_filter = 2
+position = Vector2(211, 288)
+rotation = 0.137881
+scale = Vector2(0.205502, 0.205502)
+texture = ExtResource("4_08sr5")
+
+[node name="exam_label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 45.0
+offset_right = 1095.0
+offset_bottom = 191.0
+text = "EXAM TIME!"
+label_settings = SubResource("LabelSettings_u1emq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit_button" type="TextureButton" parent="."]
+visible = false
+offset_left = 456.0
+offset_top = 361.0
+offset_right = 1069.0
+offset_bottom = 505.0
+texture_normal = ExtResource("7_udhq2")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("11_lkv55")
+
+[node name="Label" type="Label" parent="exit_button"]
+layout_mode = 0
+offset_right = 613.0
+offset_bottom = 144.0
+text = "EXIT"
+label_settings = SubResource("LabelSettings_rq2mv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="Wysrywacz_literek" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Kosz/Area2D" to="Kosz" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="paper/exam finished timer" to="paper/exam finished timer" method="_on_timeout"]
+[connection signal="pressed" from="TextureRect/TextureButton" to="TextureRect/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="exit_button" to="exit_button" method="_on_pressed"]
