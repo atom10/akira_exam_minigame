@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=3 uid="uid://cweyt101bmcnl"]
+
+[ext_resource type="Texture2D" uid="uid://bg08v2gxfir0s" path="res://Graphics/Exam_minigame/menu_background.png" id="1_n7hpm"]
+[ext_resource type="Texture2D" uid="uid://cem01k4rs1cca" path="res://Graphics/Exam_minigame/paper.jpg" id="2_5h0aj"]
+[ext_resource type="Texture2D" uid="uid://dvu76stvbft7c" path="res://Graphics/Exam_minigame/button_background.png" id="3_wm68d"]
+[ext_resource type="Script" path="res://Src/Exam_minigame/Menu/start_button.gd" id="4_1i6ah"]
+[ext_resource type="Script" path="res://Src/Exam_minigame/Menu/exit_button.gd" id="5_cu13n"]
+[ext_resource type="PackedScene" uid="uid://cpdy3frm7klud" path="res://Src/Exam_minigame/exam_minigame.tscn" id="5_ib1kl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1emq"]
+font_size = 71
+outline_size = 40
+outline_color = Color(0, 0, 0.333333, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rq2mv"]
+font_size = 82
+outline_size = 15
+outline_color = Color(0.109804, 0.0627451, 0.184314, 1)
+
+[node name="exam_minigame_menu" type="TextureRect"]
+offset_right = 1318.0
+offset_bottom = 741.0
+texture = ExtResource("1_n7hpm")
+expand_mode = 1
+
+[node name="paper_Stack" type="Node2D" parent="."]
+
+[node name="Paper" type="Sprite2D" parent="paper_Stack"]
+texture_filter = 2
+position = Vector2(172, 310)
+rotation = -0.00191967
+scale = Vector2(0.205502, 0.205502)
+texture = ExtResource("2_5h0aj")
+
+[node name="Paper2" type="Sprite2D" parent="paper_Stack"]
+texture_filter = 2
+position = Vector2(191, 296)
+rotation = 0.0680678
+scale = Vector2(0.205502, 0.205502)
+texture = ExtResource("2_5h0aj")
+
+[node name="Paper3" type="Sprite2D" parent="paper_Stack"]
+texture_filter = 2
+position = Vector2(211, 288)
+rotation = 0.137881
+scale = Vector2(0.205502, 0.205502)
+texture = ExtResource("2_5h0aj")
+
+[node name="exam_game_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 45.0
+offset_right = 1095.0
+offset_bottom = 191.0
+text = "EXAM TIME!"
+label_settings = SubResource("LabelSettings_u1emq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 361.0
+offset_right = 1065.0
+offset_bottom = 505.0
+texture_normal = ExtResource("3_wm68d")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_1i6ah")
+gameplay_scene = ExtResource("5_ib1kl")
+
+[node name="Label" type="Label" parent="start_button"]
+layout_mode = 0
+offset_right = 613.0
+offset_bottom = 144.0
+text = "START"
+label_settings = SubResource("LabelSettings_rq2mv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit_button" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 456.0
+offset_top = 361.0
+offset_right = 1069.0
+offset_bottom = 505.0
+texture_normal = ExtResource("3_wm68d")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_cu13n")
+
+[node name="Label" type="Label" parent="exit_button"]
+layout_mode = 0
+offset_right = 613.0
+offset_bottom = 144.0
+text = "EXIT"
+label_settings = SubResource("LabelSettings_rq2mv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="start_button" to="start_button" method="_on_pressed"]
+[connection signal="pressed" from="exit_button" to="exit_button" method="_on_pressed"]

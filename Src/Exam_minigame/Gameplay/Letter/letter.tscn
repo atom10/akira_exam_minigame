@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bds10wh5ftq7t"]
+
+[ext_resource type="Script" path="res://Src/Exam_minigame/Gameplay/Letter/letter.gd" id="1_htirw"]
+[ext_resource type="Texture2D" uid="uid://cqx82dryyncfx" path="res://Graphics/Exam_minigame/Letters/a.png" id="2_4v7y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7btj8"]
+size = Vector2(185, 204)
+
+[node name="Literka" type="CharacterBody2D"]
+scale = Vector2(0.435, 0.435)
+collision_mask = 0
+script = ExtResource("1_htirw")
+
+[node name="TextureRect" type="Sprite2D" parent="."]
+texture = ExtResource("2_4v7y7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.76436, -5.73563)
+shape = SubResource("RectangleShape2D_7btj8")

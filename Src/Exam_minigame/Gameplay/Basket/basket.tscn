@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ovrimnbptimo"]
+
+[ext_resource type="Script" path="res://Src/Exam_minigame/Gameplay/Basket/basket.gd" id="1_uorvn"]
+[ext_resource type="Texture2D" uid="uid://bga0m05u4r81v" path="res://Graphics/Exam_minigame/basket.png" id="2_ppkgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hn03w"]
+size = Vector2(166, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imnf0"]
+
+[node name="basket" type="CharacterBody2D"]
+position = Vector2(529, 592)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("1_uorvn")
+
+[node name="body" type="Sprite2D" parent="."]
+position = Vector2(110.909, 112.727)
+scale = Vector2(0.428763, 0.428763)
+texture = ExtResource("2_ppkgd")
+metadata/_edit_use_anchors_ = true
+
+[node name="letter_detector" type="Area2D" parent="."]
+
+[node name="shape" type="CollisionShape2D" parent="letter_detector"]
+position = Vector2(111, 28.5)
+shape = SubResource("RectangleShape2D_hn03w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(110.909, 100)
+shape = SubResource("RectangleShape2D_imnf0")
+
+[connection signal="body_entered" from="letter_detector" to="." method="_on_area_2d_body_entered"]

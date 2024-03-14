@@ -1,5 +1,7 @@
-res://Wysrywacz_literek.gd
-res://minigra_egzamin.tscn
-res://exit_button.gd
-res://exam finished timer.gd
-res://literka_prafabrykat/literka.tscn
+res://Src/Exam_minigame/Gameplay/Exam/exam.tscn
+res://Src/Exam_minigame/Gameplay/Letter_spawner/letter_spawner.gd
+res://Src/Exam_minigame/Gameplay/Exam/finish_delay.gd
+res://Src/Exam_minigame/Gameplay/Exam/exam.gd
+res://Src/Exam_minigame/Menu/exam_minigame_menu.tscn
+res://Src/Exam_minigame/exam_minigame.tscn
+res://main.tscn

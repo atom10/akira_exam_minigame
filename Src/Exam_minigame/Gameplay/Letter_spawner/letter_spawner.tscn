@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://uux3qb1ywg1s"]
+
+[ext_resource type="Script" path="res://Src/Exam_minigame/Gameplay/Letter_spawner/letter_spawner.gd" id="1_lgobx"]
+
+[node name="spawn_area" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 20.0
+script = ExtResource("1_lgobx")
+
+[node name="spawner_repeater" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="spawner_repeater" to="." method="_on_timer_timeout"]

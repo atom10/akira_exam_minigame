@@ -1,0 +1,12 @@
+[gd_scene load_steps=6 format=3 uid="uid://c87k3xg4kacw2"]
+
+[ext_resource type="Script" path="res://Src/Exam_minigame/Gameplay/letter_shared_data.gd" id="1_gm136"]
+[ext_resource type="Texture2D" uid="uid://cqx82dryyncfx" path="res://Graphics/Exam_minigame/Letters/a.png" id="2_ogsc5"]
+[ext_resource type="Texture2D" uid="uid://dga61dus2ivye" path="res://Graphics/Exam_minigame/Letters/b.png" id="3_dae6h"]
+[ext_resource type="Texture2D" uid="uid://dou8omy5pyt8a" path="res://Graphics/Exam_minigame/Letters/c.png" id="4_rliuc"]
+[ext_resource type="Texture2D" uid="uid://ulgv7gbbxxgp" path="res://Graphics/Exam_minigame/Letters/d.png" id="5_l68ta"]
+
+[node name="letter_shared_data" type="Node"]
+script = ExtResource("1_gm136")
+letter_graphics = Array[Texture2D]([ExtResource("2_ogsc5"), ExtResource("3_dae6h"), ExtResource("4_rliuc"), ExtResource("5_l68ta")])
+letters = Array[String](["A", "B", "C", "D"])
