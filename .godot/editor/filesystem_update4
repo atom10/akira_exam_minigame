@@ -1,7 +1,8 @@
-res://Src/Exam_minigame/Gameplay/Exam/exam.tscn
-res://Src/Exam_minigame/Gameplay/Letter_spawner/letter_spawner.gd
-res://Src/Exam_minigame/Gameplay/Exam/finish_delay.gd
-res://Src/Exam_minigame/Gameplay/Exam/exam.gd
-res://Src/Exam_minigame/Menu/exam_minigame_menu.tscn
 res://Src/Exam_minigame/exam_minigame.tscn
+res://Src/Exam_minigame/Gameplay/Letter_spawner/letter_spawner.gd
+res://Src/Exam_minigame/Gameplay/Basket/basket.gd
+res://Src/Exam_minigame/Gameplay/Basket/basket.tscn
+res://Src/Exam_minigame/Menu/exam_minigame_menu.tscn
+res://Src/Exam_minigame/Gameplay/Exam/exam.tscn
 res://main.tscn
+res://Src/Exam_minigame/Gameplay/Letter/letter.tscn
